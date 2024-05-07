@@ -1,5 +1,8 @@
 package dominio;
 
 public interface AdapterCalculador {
-	int distanciaEnMEtros(Direccion direccionInicial, Direccion direccionFinal);
+	static int distanciaEnMetros(Direccion direccionInicial, Direccion direccionFinal) {
+	
+		return DistanceMatrixAPI.distanciaEnMetrosEntre(direccionInicial, direccionFinal);
+	}
 }

@@ -11,6 +11,7 @@ public class Trayecto {
 	int tiempoEstimado;
 	Boolean finalizado;
 	ArrayList<Parada> paradas = new ArrayList<>();
+	int velocidadPromedio;
 	
 	public List<Persona> getCuidadores() {
 		return cuidadores;
@@ -68,14 +69,30 @@ public class Trayecto {
 		this.paradas = paradas;
 	}
 	
-	public int calcularTiempoEstimado() {
-		
-		return tiempoEstimado;		
-	    }
-
-	
 	public void agregarParada(Parada parada,int orden ) {
-		paradas.add(orden +1, parada);
+		paradas.add(orden, parada);
 	}
+	
+	
+	 public void calcularTiempoEstimado() {
+	    int tiempoDemorado = paradas.stream().mapToInt(Parada::getTiempoDetenido).sum();
+	    int tiempoEntreParadas = calcularTiempoEntreParadas();
+	    this.tiempoEstimado = tiempoDemorado + tiempoEntreParadas;
+	 }
 
+	 private int calcularTiempoEntreParadas() {
+	    if (paradas.size() <= 1) {
+	       return 0;
+	    }
+	    return paradas.stream().mapToInt(parada -> {
+	    	int indiceParada = paradas.indexOf(parada);
+	    	if (indiceParada < paradas.size() - 1) {
+	        Parada siguienteParada = paradas.get(indiceParada + 1);
+	        return CalculadorDeTiempo.minutosAproxEntre(parada.getDireccion(), siguienteParada.getDireccion(), velocidadPromedio);
+	        } else {
+	        	   return 0; // La última parada no tiene tiempo entre paradas
+	        	   }
+	    	}).sum();
+	    }	  
+	
 }
