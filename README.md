@@ -2,4 +2,4 @@
 Integrantes:
 
 -Andrea Avalos
--Mai Cardenas
+-Mailen Cardenas
