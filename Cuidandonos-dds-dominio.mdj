@@ -1941,7 +1941,7 @@
 											"top": 494,
 											"width": 223.9423828125,
 											"height": 13,
-											"text": "+calcularTiempoDemora(): integer",
+											"text": "+calcularTiempoEstimado(): integer",
 											"horizontalAlignment": 0
 										}
 									],
@@ -3338,8 +3338,8 @@
 								"$ref": "AAAAAAFF+qBtyKM79qY="
 							},
 							"font": "Arial;13;0",
-							"left": 1360,
-							"top": 152,
+							"left": 1208,
+							"top": 136,
 							"width": 100,
 							"height": 51
 						},
@@ -4854,8 +4854,8 @@
 								"$ref": "AAAAAAFF+qBtyKM79qY="
 							},
 							"font": "Arial;13;0",
-							"left": 1160,
-							"top": 120,
+							"left": 1008,
+							"top": 104,
 							"width": 464,
 							"height": 56,
 							"text": "-A Persona se lo modela como una sola clase a pesar de que en un momento se penso en realizar una herencia diferenciando Cuidador y Transeunte pero existe la posiblidad que una persona tome un rol o otro"
@@ -4867,8 +4867,8 @@
 								"$ref": "AAAAAAFF+qBtyKM79qY="
 							},
 							"font": "Arial;13;0",
-							"left": 1160,
-							"top": 168,
+							"left": 1008,
+							"top": 152,
 							"width": 456,
 							"height": 51,
 							"text": "- Las notificaciones se podrian realizar dentro de la misma aplicacion pero en otro caso para notificaciones externas mediante Whatapp, email y otros medios se podria implementar mediante un Adapter de una API"
@@ -4880,8 +4880,8 @@
 								"$ref": "AAAAAAFF+qBtyKM79qY="
 							},
 							"font": "Arial;13;0",
-							"left": 1160,
-							"top": 216,
+							"left": 1008,
+							"top": 200,
 							"width": 472,
 							"height": 38,
 							"text": "-Los rechazar, aceptar, confirmar y demas botones son casos de usos que el usuario ejecutara"
@@ -4893,11 +4893,11 @@
 								"$ref": "AAAAAAFF+qBtyKM79qY="
 							},
 							"font": "Arial;13;0",
-							"left": 1160,
-							"top": 256,
+							"left": 1008,
+							"top": 240,
 							"width": 464,
-							"height": 40,
-							"text": "- El tiempo estimado se calcula a partir de la cantidad de metros que nos brinda la API externa Distance Matriz API"
+							"height": 51,
+							"text": "- El tiempo estimado se calcula a partir de la cantidad de metros que nos brinda la API externa Distance Matriz API y una velocidad promedio que se puede extraer de un archivo. La velocidad promedio debe estar en km/h."
 						},
 						{
 							"_type": "UMLTextView",
@@ -4906,7 +4906,7 @@
 								"$ref": "AAAAAAFF+qBtyKM79qY="
 							},
 							"font": "Arial;13;0",
-							"left": 1160,
+							"left": 1008,
 							"top": 288,
 							"width": 440,
 							"height": 56,
@@ -6141,7 +6141,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGPPwmaaWIX5Do="
 							},
-							"name": "boolean esUsuarioActivo;"
+							"name": "boolean esUsuarioActivo;",
+							"type": ""
 						}
 					]
 				},
@@ -6905,7 +6906,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGPUQBDxP9m2zE="
 									},
-									"name": "Parada"
+									"name": "Parada",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -6913,7 +6915,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGPUQBDxP9m2zE="
 									},
-									"name": "integer"
+									"name": "integer",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -6932,7 +6935,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGPRTo4ba0AE1g="
 							},
-							"name": "calcularTiempoDemora",
+							"name": "calcularTiempoEstimado",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -7046,7 +7049,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGPRUNmywPmrcs="
 									},
-									"name": "Direccion"
+									"name": "Direccion",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -7054,7 +7058,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGPRUNmywPmrcs="
 									},
-									"name": "Direccion"
+									"name": "Direccion",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -7163,7 +7168,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGPRUVAUyCAzuU="
 									},
-									"name": "Direccion"
+									"name": "Direccion",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -7171,7 +7177,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGPRUVAUyCAzuU="
 									},
-									"name": "Direccion"
+									"name": "Direccion",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -7216,7 +7223,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGPRfTAP4ypdEw="
 									},
-									"name": "Direccion"
+									"name": "Direccion",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -7224,7 +7232,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGPRfTAP4ypdEw="
 									},
-									"name": "Direccion"
+									"name": "Direccion",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
